@@ -1,12 +1,20 @@
 # missiya.neticeler
 <style>
-    /* --- Tam Ekran Şəkil Arxa Fon Üçün --- */
+    /* --- Tam ekran şəkil göstərən class --- */
+    .fullscreen-img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain; /* şəkil bütöv, kəsilmədən göstərilsin */
+        display: block;
+        margin: 0;
+        padding: 0;
+        background: #000;
+    }
+
+    /* --- Ümumi Stillər --- */
     body {
         font-family: Tahoma, sans-serif;
-        background-image: url("IMAGE_URL_HERE"); /* ⭐ Buraya şəkil linkini yapışdır */
-        background-size: cover;     /* şəkli ekrana tam yayıb doldurur */
-        background-position: center;
-        background-repeat: no-repeat;
+        background-color: #ffffff;
         margin: 0;
         padding: 0;
     }
@@ -18,7 +26,6 @@
         align-items: center;
         height: 100vh;
         text-align: center;
-        backdrop-filter: blur(4px); /* optional: arxa fon bulansın istəyirsənsə */
     }
 
     #input-page h1 {
@@ -56,7 +63,6 @@
     #result-page {
         display: none;
         padding: 20px;
-        backdrop-filter: blur(4px); /* optional */
     }
 
     .page-container {
@@ -65,7 +71,6 @@
         background-color: white;
         padding: 30px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        border-radius: 8px;
     }
 
     /* Başlıq və Loqo */
@@ -132,7 +137,7 @@
         border-bottom: 1px solid #ccc;
     }
 
-    /* Bal Cədvəli */
+    /* Bal Cədvəli (Sual/Cavab) */
     .score-table {
         width: 100%;
         border-collapse: collapse;
@@ -162,7 +167,7 @@
         font-weight: bold;
     }
 
-    /* Fənnin Ümumi Göstəriciləri */
+    /* Fənnin Ümumi Göstəriciləri Cədvəli */
     .summary-table {
         width: 100%;
         border-collapse: collapse;

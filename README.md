@@ -4,7 +4,7 @@
     .fullscreen-img {
         width: 100vw;
         height: 100vh;
-        object-fit: contain; /* şəkil bütöv, kəsilmədən göstərilsin */
+        object-fit: contain;
         display: block;
         margin: 0;
         padding: 0;
@@ -73,7 +73,6 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    /* Başlıq və Loqo */
     .header-section {
         display: flex;
         justify-content: space-between;
@@ -102,7 +101,6 @@
         font-size: 14px;
     }
 
-    /* Şagird Məlumat Cədvəli */
     .info-table {
         width: 100%;
         border-collapse: collapse;
@@ -121,7 +119,6 @@
         width: 15%;
     }
 
-    /* Fənn Hissəsi */
     .subject-box {
         margin-bottom: 20px;
         border: 1px solid #ccc;
@@ -137,7 +134,6 @@
         border-bottom: 1px solid #ccc;
     }
 
-    /* Bal Cədvəli (Sual/Cavab) */
     .score-table {
         width: 100%;
         border-collapse: collapse;
@@ -167,7 +163,6 @@
         font-weight: bold;
     }
 
-    /* Fənnin Ümumi Göstəriciləri Cədvəli */
     .summary-table {
         width: 100%;
         border-collapse: collapse;

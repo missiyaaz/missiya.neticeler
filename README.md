@@ -9,13 +9,14 @@
         /* --- Ümumi Stillər --- */
         body {
             font-family: Tahoma, sans-serif;
-            background-color: #ffffff;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
 
         /* --- Giriş Forması Stilləri --- */
         #input-page {
+            /* Səhifəni tam mərkəzləşdirmək üçün */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,6 +28,7 @@
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 20px;
+            color: #333;
         }
 
         #jobNumberInput {
@@ -54,130 +56,19 @@
             background-color: #005bb5;
         }
 
-        /* --- Nəticə Vərəqəsi Stilləri --- */
+        /* --- Nəticə Şəkli Stilləri --- */
         #result-page {
-            display: none; /* Başlanğıcda gizli saxlayırıq */
-            padding: 20px;
-        }
-
-        .page-container {
-            width: 900px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        /* Başlıq və Loqo */
-        .header-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .result-title-box {
-            background-color: #f0f0f0;
-            padding: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            border: 1px solid #ccc;
-            width: 50%;
-        }
-
-        .logo-box {
-            text-align: center;
-            font-weight: bold;
-            line-height: 1.1;
-        }
-
-        .logo-box p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        /* Şagird Məlumat Cədvəli */
-        .info-table {
+            display: none; /* Başlanğıcda gizlidir */
             width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        .info-table td {
-            border: 1px solid #000;
-            padding: 5px 10px;
-            font-size: 12px;
-        }
-
-        .info-table .label {
-            background-color: #f0f0f0;
-            font-weight: bold;
-            width: 15%;
-        }
-
-        /* Fənn Hissəsi */
-        .subject-box {
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            padding: 5px;
-        }
-
-        .subject-name {
-            background-color: #f0f0f0;
-            padding: 5px;
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 5px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        /* Bal Cədvəli (Sual/Cavab) */
-        .score-table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
-            font-size: 10px;
-            margin-bottom: 5px;
-        }
-
-        .score-table td {
-            border: 1px solid #ccc;
-            padding: 3px;
-            white-space: nowrap;
-        }
-
-        .score-table thead td {
-            background-color: #e0e0e0;
-            font-weight: bold;
-        }
-
-        .score-table .correct {
-            color: green;
-            font-weight: bold;
-        }
-
-        .score-table .wrong {
-            color: red;
-            font-weight: bold;
-        }
-
-        /* Fənnin Ümumi Göstəriciləri Cədvəli */
-        .summary-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 12px;
-        }
-
-        .summary-table td {
-            border: 1px solid #000;
-            padding: 5px;
-            font-weight: bold;
             text-align: center;
         }
 
-        .summary-table .highlight-value {
-            background-color: #f0f0f0;
+        /* Şəklin düzgün görünüşü üçün stillər */
+        #result-page img {
+            max-width: 100%; /* Şəklin brauzer pəncərəsindən böyük olmasının qarşısını alır */
+            height: auto;
+            display: block; 
+            margin: 0 auto; /* Şəkli üfüqi olaraq mərkəzləşdirir */
         }
     </style>
 </head>
@@ -192,51 +83,7 @@
     </div>
 
     <div id="result-page">
-        <div class="page-container">
-            
-            <div class="header-section">
-                <div class="result-title-box">
-                    İMTAHAN NƏTİCƏ VƏRƏQƏSİ
-                </div>
-                <div class="logo-box">
-                    <img src="https://example.com/missiya_logo.png" alt="Missiya Təhsil Şirkəti Loqosu" style="max-width: 80px;">
-                    <p>MİSSİYA</p>
-                    <p>TƏHSİL ŞİRKƏTİ</p>
-                </div>
-            </div>
-
-            <table class="info-table">
-                <tr><td class="label">İmtahan Bloku</td><td class="value"></td><td class="label">Adı</td><td class="value">ZƏHRA</td></tr>
-                <tr><td class="label">Keçirilmə tarixi</td><td class="value">2025-11-30</td><td class="label">Soyadı</td><td class="value">ABDULLAZADƏ</td></tr>
-                <tr><td class="label">İş nömrəsi</td><td class="value">54979</td><td class="label">Sinif</td><td class="value">10</td></tr>
-                <tr><td class="label">Bölmə</td><td class="value">Azərbaycan</td><td class="label">Variant</td><td class="value">A</td></tr>
-                <tr><td class="label">Blok</td><td class="value">4 #</td><td class="label">Bal</td><td class="value">259.94</td></tr>
-                <tr><td class="label">Faiz</td><td class="value">65%</td><td class="label">Doğru</td><td class="value">56.0</td></tr>
-                <tr><td class="label">Yanlış</td><td class="value">26.0</td><td class="label">Cavabsız</td><td class="value">5.0</td></tr>
-            </table>
-
-            <div class="subject-box">
-                <div class="subject-name">Biologiya (1-30)</div>
-                <table class="summary-table">
-                    <tr><td>Bal</td><td class="highlight-value">93.18</td><td>Faiz</td><td class="highlight-value">66.67%</td><td>Doğru</td><td class="highlight-value">20.0</td><td>Yanlış</td><td class="highlight-value">10.0</td><td>Cavabsız</td><td class="highlight-value">0.0</td></tr>
-                </table>
-            </div>
-            
-            <div class="subject-box">
-                <div class="subject-name">Kimya (31-60)</div>
-                <table class="summary-table">
-                    <tr><td>Bal</td><td class="highlight-value">102.27</td><td>Faiz</td><td class="highlight-value">73.33%</td><td>Doğru</td><td class="highlight-value">22.0</td><td>Yanlış</td><td class="highlight-value">8.0</td><td>Cavabsız</td><td class="highlight-value">0.0</td></tr>
-                </table>
-            </div>
-
-            <div class="subject-box">
-                <div class="subject-name">Fizika (61-90)</div>
-                <table class="summary-table">
-                    <tr><td>Bal</td><td class="highlight-value">48.48</td><td>Faiz</td><td class="highlight-value">56.67%</td><td>Doğru</td><td class="highlight-value">17.0</td><td>Yanlış</td><td class="highlight-value">8.0</td><td>Cavabsız</td><td class="highlight-value">5.0</td></tr>
-                </table>
-            </div>
-
-        </div>
+        <img src="netice-sekli.jpg" alt="İmtahan Nəticə Vərəqəsi Şəkli">
     </div>
 
     <script>
@@ -245,16 +92,18 @@
             const inputPage = document.getElementById('input-page');
             const resultPage = document.getElementById('result-page');
 
-            // JavaScript yalnız 54979 nömrəsini qəbul edir
+            // Yalnız "54979" daxil edilərsə nəticə səhifəsi açılır.
             if (inputNumber === '54979') {
-                // Giriş səhifəsini gizlədir, nəticəni göstərir
+                // Giriş səhifəsini gizlədir
                 inputPage.style.display = 'none';
+                // Nəticə səhifəsini (şəkli) göstərir
                 resultPage.style.display = 'block';
+                // Səhifənin yuxarısına kaydırır
                 window.scrollTo(0, 0); 
 
             } else {
-                // Başqa nömrə daxil edilərsə xəta mesajı
-                alert('Daxil edilən iş nömrəsi tapılmadı. Zəhmət olmasa "54979" daxil edin.');
+                // Səhv nömrə daxil edilərsə yeni xəta mesajı
+                alert('Nəticə tapılmadı.');
             }
         }
     </script>
